@@ -144,7 +144,7 @@ define :cq_instance,
 
   # Start instance
   # ---------------------------------------------------------------------------
-  service daemon_name do
+  service "cq#{cq_version('short_squeezed')}-#{local_id}" do
     supports :status => true, :restart => true
     action [:enable, :start]
 
